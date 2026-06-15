@@ -1,0 +1,129 @@
+.location {
+  background: var(--sand);
+  padding: 7rem 0;
+}
+
+.location__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.location__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.location__header .section-title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.location__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.location__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.location__feature h4 {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+
+.location__feature p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-light);
+}
+
+.location__travel {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+.location__travel li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.location__travel li > span:first-child { width: 1.5rem; text-align: center; }
+
+.location__map-container {
+  position: relative;
+  height: 360px;
+  background: var(--sand-dark);
+  overflow: hidden;
+}
+
+.location__map-container iframe {
+  position: absolute;
+  inset: 0;
+  filter: grayscale(20%) contrast(1.05);
+}
+
+.location__map-pin {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--navy);
+  color: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.location__map-pin span { color: var(--gold); }
+.location__map-pin p { margin: 0; }
+
+.location__image {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.location__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.location__image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(10,18,38,0.7));
+  padding: 3rem 2rem 1.5rem;
+}
+.location__image-overlay p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .location__grid { grid-template-columns: 1fr; }
+  .location__map-container { height: 280px; }
+  .location__image { height: 280px; }
+}
