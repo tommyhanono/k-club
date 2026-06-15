@@ -9,7 +9,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        src="/assets/hero-video.mp4"
+        src={import.meta.env.BASE_URL + 'assets/hero-video.mp4'}
       />
       <div className="hero__overlay" />
 

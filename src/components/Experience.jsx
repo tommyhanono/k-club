@@ -1,10 +1,12 @@
 import './Experience.css'
 
+const B = import.meta.env.BASE_URL
+
 const MOMENTS = [
-  { img: '/assets/bv-5.jpg', caption: 'Terrace with Ocean Views' },
-  { img: '/assets/bv-7.jpg', caption: 'Al Fresco Family Dinners' },
-  { img: '/assets/actual-marina.jpg', caption: 'Buenaventura Marina at Twilight' },
-  { img: '/assets/bv-9.jpg', caption: 'Open Living — Indoor/Outdoor Flow' },
+  { img: B + 'assets/bv-5.jpg', caption: 'Terrace with Ocean Views' },
+  { img: B + 'assets/bv-7.jpg', caption: 'Al Fresco Family Dinners' },
+  { img: B + 'assets/actual-marina.jpg', caption: 'Buenaventura Marina at Twilight' },
+  { img: B + 'assets/bv-9.jpg', caption: 'Open Living — Indoor/Outdoor Flow' },
 ]
 
 export default function Experience() {

@@ -51,15 +51,15 @@ export default function Services() {
 
         <div className="services__nautical-gallery">
           <div className="services__nautical-item">
-            <img src="/assets/boat-bar-design-land.jpg" alt="Boat-shaped outdoor bar" loading="lazy" />
+            <img src={import.meta.env.BASE_URL + 'assets/boat-bar-design-land.jpg'} alt="Boat-shaped outdoor bar" loading="lazy" />
             <p>Signature Nautical Bar</p>
           </div>
           <div className="services__nautical-item">
-            <img src="/assets/boat-tub-design-land.jpg" alt="Boat-shaped hot tub" loading="lazy" />
+            <img src={import.meta.env.BASE_URL + 'assets/boat-tub-design-land.jpg'} alt="Boat-shaped hot tub" loading="lazy" />
             <p>Boat-Shaped Hot Tub</p>
           </div>
           <div className="services__nautical-item">
-            <img src="/assets/actual-marina.jpg" alt="Buenaventura Marina" loading="lazy" />
+            <img src={import.meta.env.BASE_URL + 'assets/actual-marina.jpg'} alt="Buenaventura Marina" loading="lazy" />
             <p>Private Marina Access</p>
           </div>
         </div>

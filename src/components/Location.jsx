@@ -33,7 +33,7 @@ export default function Location() {
           <div className="location__map-container">
             <iframe
               title="Buenaventura Resort location"
-              src="https://maps.google.com/maps?q=Buenaventura+Golf+%26+Beach+Resort+Panama&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps?q=Buenaventura+Golf+%26+Beach+Resort+Panama&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -49,7 +49,7 @@ export default function Location() {
         </div>
 
         <div className="location__image">
-          <img src="/assets/actual-marina.jpg" alt="Buenaventura Marina at twilight" />
+          <img src={import.meta.env.BASE_URL + 'assets/actual-marina.jpg'} alt="Buenaventura Marina at twilight" />
           <div className="location__image-overlay">
             <p>Buenaventura Private Peninsula — Pacific Coast of Panamá</p>
           </div>

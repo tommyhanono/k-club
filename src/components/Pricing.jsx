@@ -9,7 +9,7 @@ const SEASONS = [
     tagColor: 'gold',
     nightly: 'USD 5,500',
     weekly: 'USD 34,000',
-    monthly: null,
+    monthly: 'On Request',
     note: 'Minimum 7 nights. Priority waitlist — book 6+ months in advance.',
   },
   {
@@ -87,12 +87,10 @@ export default function Pricing() {
                   <span className="pricing__rate-value">{s.weekly}</span>
                   <span className="pricing__rate-label">per week</span>
                 </div>
-                {s.monthly && (
-                  <div className="pricing__rate">
-                    <span className="pricing__rate-value">{s.monthly}</span>
-                    <span className="pricing__rate-label">per month</span>
-                  </div>
-                )}
+                <div className="pricing__rate">
+                  <span className="pricing__rate-value">{s.monthly}</span>
+                  <span className="pricing__rate-label">per month</span>
+                </div>
               </div>
               <p className="pricing__note">{s.note}</p>
               <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn btn-whatsapp pricing__btn">

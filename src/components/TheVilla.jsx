@@ -47,13 +47,15 @@ const FLOORS = [
   },
 ]
 
+const B = import.meta.env.BASE_URL
+
 const GALLERY = [
-  { src: '/assets/bv-34.jpg', caption: 'Terrace with Private Pool & Beach Views' },
-  { src: '/assets/bv-3.jpg', caption: 'Open-Plan Living Room — Ocean Views' },
-  { src: '/assets/bv-26.jpg', caption: 'Luxury Living & Dining Area' },
-  { src: '/assets/bv-12.jpg', caption: 'Full Kosher-Certified Kitchen' },
-  { src: '/assets/bv-1.jpg', caption: 'Beachfront Terrace & Lounge' },
-  { src: '/assets/bv-5.jpg', caption: 'Upper Terrace — Pacific Ocean Views' },
+  { src: B + 'assets/bv-34.jpg', caption: 'Terrace with Private Pool & Beach Views' },
+  { src: B + 'assets/bv-3.jpg', caption: 'Open-Plan Living Room — Ocean Views' },
+  { src: B + 'assets/bv-26.jpg', caption: 'Luxury Living & Dining Area' },
+  { src: B + 'assets/bv-12.jpg', caption: 'Full Kosher-Certified Kitchen' },
+  { src: B + 'assets/bv-1.jpg', caption: 'Beachfront Terrace & Lounge' },
+  { src: B + 'assets/bv-5.jpg', caption: 'Upper Terrace — Pacific Ocean Views' },
 ]
 
 export default function TheVilla() {
