@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="footer__contact">
           <h4>Contact</h4>
           <a
-            href="https://wa.me/50766818669?text=I'm%20interested%20in%20K%20Club%20Residencia"
+            href="https://wa.me/50766818669?text=I%27m%20interested%20in%20K%20Club%20Residencia"
             target="_blank"
             rel="noreferrer"
             className="footer__whatsapp"

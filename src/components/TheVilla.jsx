@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './TheVilla.css'
 
 const FLOORS = [
@@ -60,6 +60,17 @@ export default function TheVilla() {
   const [activeFloor, setActiveFloor] = useState('ground')
   const [lightbox, setLightbox] = useState(null)
   const floor = FLOORS.find(f => f.id === activeFloor)
+
+  useEffect(() => {
+    if (lightbox === null) return
+    const onKey = e => {
+      if (e.key === 'Escape') setLightbox(null)
+      if (e.key === 'ArrowLeft') setLightbox(l => (l - 1 + GALLERY.length) % GALLERY.length)
+      if (e.key === 'ArrowRight') setLightbox(l => (l + 1) % GALLERY.length)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox])
 
   return (
     <section id="villa" className="villa">

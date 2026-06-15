@@ -34,7 +34,7 @@ export default function Navbar() {
         ))}
         <li>
           <a
-            href="https://wa.me/50766818669?text=I'm%20interested%20in%20K%20Club%20Residencia"
+            href="https://wa.me/50766818669?text=I%27m%20interested%20in%20K%20Club%20Residencia"
             target="_blank"
             rel="noreferrer"
             className="navbar__cta"

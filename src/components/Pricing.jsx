@@ -3,24 +3,24 @@ import './Pricing.css'
 
 const SEASONS = [
   {
-    name: 'Peak Season',
-    period: 'Dec 20 – Jan 5 · Passover · Jewish Holidays',
-    tag: 'High Demand',
+    name: 'Holiday Peak',
+    period: 'Passover · Dec 24–Jan 5 · Sukkot',
+    tag: 'By Inquiry',
     tagColor: 'gold',
-    nightly: 'USD 4,500',
-    weekly: 'USD 28,000',
-    monthly: 'USD 95,000',
-    note: 'Minimum 5 nights. Early booking required.',
+    nightly: 'USD 5,500',
+    weekly: 'USD 34,000',
+    monthly: null,
+    note: 'Minimum 7 nights. Priority waitlist — book 6+ months in advance.',
   },
   {
     name: 'High Season',
-    period: 'July – August · Sukkot · Spring Break',
+    period: 'July – August · Spring Break',
     tag: 'Popular',
     tagColor: 'navy',
-    nightly: 'USD 3,500',
-    weekly: 'USD 22,000',
-    monthly: 'USD 72,000',
-    note: 'Minimum 3 nights.',
+    nightly: 'USD 3,800',
+    weekly: 'USD 24,000',
+    monthly: 'USD 78,000',
+    note: 'Minimum 4 nights.',
   },
   {
     name: 'Mid Season',
@@ -30,17 +30,17 @@ const SEASONS = [
     nightly: 'USD 2,800',
     weekly: 'USD 17,000',
     monthly: 'USD 55,000',
-    note: 'Flexible minimum stays.',
+    note: 'Minimum 3 nights. Flexible stays available.',
   },
   {
     name: 'Low Season',
     period: 'January – February · September',
-    tag: 'Available',
+    tag: 'Extended Stay',
     tagColor: 'default',
     nightly: 'USD 2,200',
     weekly: 'USD 13,500',
     monthly: 'USD 42,000',
-    note: 'Long-stay discounts available.',
+    note: 'Ideal for monthly stays. Negotiable for 30+ nights.',
   },
 ]
 
@@ -87,10 +87,12 @@ export default function Pricing() {
                   <span className="pricing__rate-value">{s.weekly}</span>
                   <span className="pricing__rate-label">per week</span>
                 </div>
-                <div className="pricing__rate">
-                  <span className="pricing__rate-value">{s.monthly}</span>
-                  <span className="pricing__rate-label">per month</span>
-                </div>
+                {s.monthly && (
+                  <div className="pricing__rate">
+                    <span className="pricing__rate-value">{s.monthly}</span>
+                    <span className="pricing__rate-label">per month</span>
+                  </div>
+                )}
               </div>
               <p className="pricing__note">{s.note}</p>
               <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn btn-whatsapp pricing__btn">
