@@ -248,5 +248,12 @@
   .villa__specs { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Editorial alternating layout: large-small / small-large / small-large */
 .villa__gallery-item:nth-child(1) { grid-column: span 2; }
-@media (max-width: 900px) { .villa__gallery-item:nth-child(1) { grid-column: span 1; } }
+.villa__gallery-item:nth-child(4) { grid-column: span 2; }
+.villa__gallery-item:nth-child(6) { grid-column: span 2; }
+@media (max-width: 900px) {
+  .villa__gallery-item:nth-child(1),
+  .villa__gallery-item:nth-child(4),
+  .villa__gallery-item:nth-child(6) { grid-column: span 1; }
+}
