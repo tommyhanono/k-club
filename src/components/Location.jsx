@@ -49,7 +49,7 @@ export default function Location() {
         </div>
 
         <div className="location__image">
-          <img src={import.meta.env.BASE_URL + 'assets/actual-marina.jpg'} alt="Buenaventura Marina at twilight" />
+          <img src={import.meta.env.BASE_URL + 'assets/marina-sunset.jpg'} alt="Buenaventura Marina at sunset" />
           <div className="location__image-overlay">
             <p>Buenaventura Private Peninsula — Pacific Coast of Panamá</p>
           </div>
