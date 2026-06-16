@@ -94,6 +94,21 @@
 .location__map-pin span { color: var(--gold); }
 .location__map-pin p { margin: 0; }
 
+.location__map-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--navy);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  transition: color 0.2s;
+}
+.location__map-link:hover { color: var(--gold); }
+
 .location__masterplan {
   margin-bottom: 3rem;
   border: 1px solid var(--sand-dark);
@@ -115,10 +130,51 @@
   letter-spacing: 0.03em;
 }
 
+.location__masterplan-img {
+  position: relative;
+}
+
 .location__masterplan-img img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.location__masterplan-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.location__masterplan-pin-dot {
+  width: 18px;
+  height: 18px;
+  background: var(--gold);
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.4);
+  animation: pinPulse 2s ease-in-out infinite;
+}
+
+.location__masterplan-pin-label {
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+@keyframes pinPulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(201,168,76,0.4), 0 2px 8px rgba(0,0,0,0.4); }
+  50% { box-shadow: 0 0 0 7px rgba(201,168,76,0.15), 0 2px 8px rgba(0,0,0,0.4); }
 }
 
 .location__image {

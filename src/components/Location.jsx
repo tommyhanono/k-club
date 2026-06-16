@@ -32,8 +32,8 @@ export default function Location() {
 
           <div className="location__map-container">
             <iframe
-              title="Buenaventura Resort location"
-              src="https://www.google.com/maps?q=Buenaventura+Golf+%26+Beach+Resort+Panama&output=embed"
+              title="K Club Residencia location"
+              src="https://www.google.com/maps?q=8.2843,-80.2762&z=16&t=k&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -45,16 +45,28 @@ export default function Location() {
               <span>◆</span>
               <p>K Club Residencia</p>
             </div>
+            <a
+              href="https://www.google.com/maps?q=8.2843,-80.2762"
+              target="_blank"
+              rel="noreferrer"
+              className="location__map-link"
+            >
+              Open in Maps ↗
+            </a>
           </div>
         </div>
 
         <div className="location__masterplan">
           <div className="location__masterplan-label">
             <p className="section-label">Site Plan</p>
-            <p className="location__masterplan-desc">K Club Residencia — within Buenaventura Resort Master Plan</p>
+            <p className="location__masterplan-desc">K Club Residencia — Buenaventura Resort Master Plan</p>
           </div>
           <div className="location__masterplan-img">
             <img src={import.meta.env.BASE_URL + 'assets/masterplan-crop.jpg'} alt="Buenaventura Resort master plan showing K Club location" loading="lazy" />
+            <div className="location__masterplan-pin" style={{ left: '24%', top: '71%' }}>
+              <div className="location__masterplan-pin-dot" />
+              <div className="location__masterplan-pin-label">K Club</div>
+            </div>
           </div>
         </div>
 
