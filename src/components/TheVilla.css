@@ -113,8 +113,11 @@
   height: auto;
   display: block;
   transition: transform 0.4s ease;
+  max-height: 520px;
+  object-fit: contain;
+  background: white;
 }
-.villa__floor-img:hover { transform: scale(1.02); }
+.villa__floor-img:hover { transform: scale(1.01); }
 
 .villa__floor-desc {
   font-family: var(--serif);
