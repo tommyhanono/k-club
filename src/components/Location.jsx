@@ -48,6 +48,16 @@ export default function Location() {
           </div>
         </div>
 
+        <div className="location__masterplan">
+          <div className="location__masterplan-label">
+            <p className="section-label">Site Plan</p>
+            <p className="location__masterplan-desc">K Club Residencia — within Buenaventura Resort Master Plan</p>
+          </div>
+          <div className="location__masterplan-img">
+            <img src={import.meta.env.BASE_URL + 'assets/masterplan-crop.jpg'} alt="Buenaventura Resort master plan showing K Club location" loading="lazy" />
+          </div>
+        </div>
+
         <div className="location__image">
           <img src={import.meta.env.BASE_URL + 'assets/marina-sunset.jpg'} alt="Buenaventura Marina at sunset" />
           <div className="location__image-overlay">

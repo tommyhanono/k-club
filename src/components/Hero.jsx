@@ -1,6 +1,7 @@
 import './Hero.css'
 
 export default function Hero() {
+  const B = import.meta.env.BASE_URL
   return (
     <section id="hero" className="hero">
       <video
@@ -9,17 +10,22 @@ export default function Hero() {
         muted
         loop
         playsInline
-        src={import.meta.env.BASE_URL + 'assets/hero-video.mp4'}
+        poster={B + 'assets/render-night-crop.jpg'}
+        src={B + 'assets/hero-video.mp4'}
       />
       <div className="hero__overlay" />
 
       <div className="hero__content">
+        <div className="hero__kosher-seal">
+          <span className="hero__kosher-star">✡</span>
+          <span>100% Kosher Certified Residence</span>
+        </div>
         <p className="hero__eyebrow">Buenaventura · Riviera Pacífica · Panamá</p>
         <h1 className="hero__title">
           The Secret of the<br />
           <em>Riviera Pacífica</em>
         </h1>
-        <p className="hero__sub">The Essence of Pure Living</p>
+        <p className="hero__sub">The Essence of Pure Kosher Living</p>
 
         <div className="hero__actions">
           <a href="#pricing" className="btn btn-primary">View Availability</a>
@@ -27,10 +33,11 @@ export default function Hero() {
         </div>
 
         <div className="hero__badges">
-          <span>✦ 100% Kosher Certified</span>
-          <span>✦ Beachfront</span>
+          <span>✦ Kosher Certified</span>
+          <span>✦ Beachfront Villa</span>
           <span>✦ ~1,060 m²</span>
-          <span>✦ Private Pool</span>
+          <span>✦ Pool & Jacuzzi</span>
+          <span>✦ 5 Bedrooms</span>
         </div>
       </div>
 

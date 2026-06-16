@@ -5,44 +5,31 @@ const FLOORS = [
   {
     id: 'ground',
     label: 'Ground Floor',
-    area: '643 m²',
-    description: 'Open-plan living and dining areas flow seamlessly onto the terrace and infinity pool. A full Kosher kitchen, guest rooms, and direct beach access define the ground level.',
+    area: '843 m²',
+    description: 'Five en-suite guest bedrooms line the main wing, each with direct terrace access. The open living and dining area connects to a full Kosher-certified kitchen, two outdoor pools, a nautical bar, and boat-shaped hot tub on the beachfront terrace.',
     rooms: [
-      'Open Living & Dining',
-      'Full Kosher Kitchen',
-      'Guest Bedrooms × 3',
-      'Direct Pool Access',
-      'Outdoor Terrace',
-      'Beach Access',
-    ],
-    svgRooms: [
-      { x: 60, y: 60, w: 280, h: 160, label: 'Living & Dining' },
-      { x: 360, y: 60, w: 180, h: 160, label: 'Kosher Kitchen' },
-      { x: 60, y: 240, w: 160, h: 130, label: 'Bedroom 1' },
-      { x: 240, y: 240, w: 160, h: 130, label: 'Bedroom 2' },
-      { x: 420, y: 240, w: 120, h: 130, label: 'Bedroom 3' },
-      { x: 60, y: 390, w: 480, h: 100, label: 'Terrace & Pool Deck', accent: true },
+      'Guest Bedrooms × 4 (en suite)',
+      'Open Living & Dining Area',
+      'Full Kosher-Certified Kitchen',
+      'Infinity Pool (main)',
+      'Jacuzzi / Secondary Pool',
+      'Boat-Shaped Outdoor Bar',
+      'Boat-Shaped Hot Tub',
+      'Covered Outdoor Terrace',
     ],
   },
   {
     id: 'upper',
     label: 'Upper Floor',
     area: '217 m²',
-    description: 'The master suite occupies the entire upper level — a sanctuary with panoramic Pacific views, private jacuzzi terrace, and bespoke finishes throughout.',
+    description: 'The entire upper level is dedicated to the master suite — bedrooms, bathrooms, a walk-in closet, and a sweeping Pacific-facing terrace with lounge area and panoramic ocean views.',
     rooms: [
-      'Master Suite',
+      'Master Bedroom Suite',
+      'En-Suite Bathrooms',
       'Walk-in Closet',
-      'Master Bathroom',
-      'Private Jacuzzi Terrace',
-      'Marina View Lounge',
-      'Study / Office',
-    ],
-    svgRooms: [
-      { x: 80, y: 80, w: 340, h: 200, label: 'Master Suite' },
-      { x: 440, y: 80, w: 100, h: 120, label: 'Walk-in' },
-      { x: 440, y: 220, w: 100, h: 60, label: 'Bath' },
-      { x: 80, y: 300, w: 200, h: 140, label: 'Jacuzzi Terrace', accent: true },
-      { x: 300, y: 300, w: 240, h: 140, label: 'Lounge / View' },
+      'Private Pacific-View Terrace',
+      'Terrace Lounge & Dining',
+      'Ocean & Marina Views',
     ],
   },
 ]
@@ -50,14 +37,18 @@ const FLOORS = [
 const B = import.meta.env.BASE_URL
 
 const GALLERY = [
+  { src: B + 'assets/render-night-crop.jpg', caption: 'K Club Residencia — Night Render' },
   { src: B + 'assets/bv-34.jpg', caption: 'Terrace with Private Pool & Beach Views' },
-  { src: B + 'assets/marina-sunset.jpg', caption: 'Buenaventura Marina at Sunset' },
+  { src: B + 'assets/render-sunset-crop.jpg', caption: 'Villa Exterior — Golden Hour' },
   { src: B + 'assets/bv-3.jpg', caption: 'Open-Plan Living Room — Ocean Views' },
+  { src: B + 'assets/marina-sunset.jpg', caption: 'Buenaventura Marina at Sunset' },
   { src: B + 'assets/bv-26.jpg', caption: 'Luxury Living & Dining Area' },
   { src: B + 'assets/bv-aerial-clean.jpg', caption: 'Buenaventura Private Peninsula — Aerial View' },
   { src: B + 'assets/bv-12.jpg', caption: 'Full Kosher-Certified Kitchen' },
+  { src: B + 'assets/render-entrance-crop.jpg', caption: 'Villa Entrance — Dusk Arrival' },
   { src: B + 'assets/bv-1.jpg', caption: 'Beachfront Terrace & Lounge' },
   { src: B + 'assets/bv-5.jpg', caption: 'Upper Terrace — Pacific Ocean Views' },
+  { src: B + 'assets/render-portecochere-crop.jpg', caption: 'Private Porte-Cochère — Luxury Arrival' },
 ]
 
 export default function TheVilla() {
@@ -90,8 +81,8 @@ export default function TheVilla() {
         <div className="villa__specs">
           {[
             { value: '~1,060', unit: 'm²', label: 'Total Built Area' },
-            { value: '2', unit: '', label: 'Levels' },
-            { value: '∞', unit: '', label: 'Infinity Pool' },
+            { value: '5', unit: '', label: 'Bedrooms' },
+            { value: '2', unit: '', label: 'Pools & Jacuzzi' },
             { value: '100%', unit: '', label: 'Kosher Certified' },
           ].map(s => (
             <div key={s.label} className="villa__spec">
@@ -117,36 +108,11 @@ export default function TheVilla() {
 
           <div className="villa__floor-content">
             <div className="villa__floor-plan">
-              <svg viewBox="0 0 600 520" className="villa__svg">
-                <rect width="600" height="520" fill="#f7f3ec" rx="4" />
-                {floor.svgRooms.map((r, i) => (
-                  <g key={i}>
-                    <rect
-                      x={r.x} y={r.y} width={r.w} height={r.h}
-                      fill={r.accent ? '#1a2744' : 'white'}
-                      stroke={r.accent ? '#1a2744' : '#c9a84c'}
-                      strokeWidth="1.5"
-                      rx="2"
-                    />
-                    <text
-                      x={r.x + r.w / 2}
-                      y={r.y + r.h / 2}
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      fill={r.accent ? 'white' : '#1a2744'}
-                      fontSize="11"
-                      fontFamily="Inter, sans-serif"
-                      fontWeight="400"
-                      letterSpacing="0.05em"
-                    >
-                      {r.label}
-                    </text>
-                  </g>
-                ))}
-                <text x="12" y="510" fill="#c9a84c" fontSize="9" fontFamily="Inter, sans-serif" letterSpacing="0.1em">
-                  {floor.label.toUpperCase()} · {floor.area} · SCHEMATIC REPRESENTATION
-                </text>
-              </svg>
+              <img
+                src={B + (activeFloor === 'ground' ? 'assets/floorplan-ground-crop.jpg' : 'assets/floorplan-upper-crop.jpg')}
+                alt={`${floor.label} — Architectural Plan`}
+                className="villa__floor-img"
+              />
             </div>
 
             <div className="villa__floor-info">
