@@ -63,7 +63,7 @@ export default function Location() {
           </div>
           <div className="location__masterplan-img">
             <img src={import.meta.env.BASE_URL + 'assets/masterplan-crop.jpg'} alt="Buenaventura Resort master plan showing K Club location" loading="lazy" />
-            <div className="location__masterplan-pin" style={{ left: '29%', top: '18%' }}>
+            <div className="location__masterplan-pin" style={{ left: '36%', top: '37%' }}>
               <div className="location__masterplan-pin-dot" />
               <div className="location__masterplan-pin-label">K Club</div>
             </div>
